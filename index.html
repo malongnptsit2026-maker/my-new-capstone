@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Organization | Group Connect</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Load JavaScript after the HTML is ready -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- WEBSITE HEADER -->
+    <header class="site-header" id="home">
+        <div class="header-inner">
+            <p class="eyebrow">My Orginization</p>
+
+            <h1>Welcome to My Organization</h1>
+
+            <p class="header-subtitle">
+                God is good all the time. All the time God is good.
+            </p>
+
+            <div class="organization-banner">
+                <strong>NEPAL INFORMATION TECHNOLOGY STUDENT</strong>
+                <span>2026</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- GROUP MENU -->
+    <section class="control-section">
+        <h2>Group View</h2>
+
+        <p class="section-help">
+            Select a group to view its roster and message board.
+        </p>
+
+        <div
+            id="group-picker"
+            class="picker-container"
+            aria-label="Group picker">
+        </div>
+    </section>
+
+
+    <!-- LEADER MENU -->
+    <section class="control-section">
+        <h2>Leader View</h2>
+
+        <p class="section-help">
+            Select a leader to view their channel messages.
+        </p>
+
+        <div
+            id="leader-picker"
+            class="picker-container"
+            aria-label="Leader picker">
+        </div>
+    </section>
+
+
+    <!-- PERSON HISTORY MENU -->
+    <section class="control-section">
+        <h2>Person History View</h2>
+
+        <p class="section-help">
+            Select a person to view previous groups and leader channels.
+        </p>
+
+        <div
+            id="person-picker"
+            class="picker-container"
+            aria-label="Person history picker">
+        </div>
+    </section>
+
+
+    <!-- LOADING AND ERROR MESSAGE -->
+    <div
+        id="status"
+        class="status-message"
+        role="status"
+        aria-live="polite">
+        Loading dashboard data from Google Sheets...
+    </div>
+
+
+    <!-- MAIN CONTENT: JAVASCRIPT UPDATES THIS AREA -->
+    <main id="content" aria-live="polite">
+        <div class="placeholder-text">
+            <p>Choose a group, a leader or a person above.</p>
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>My Organization</h2>
+
+        <p>Information Technology</p>
+
+        <p>© 2026</p>
+    </footer>
+
+</body>
+</html>

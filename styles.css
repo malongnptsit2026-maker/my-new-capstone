@@ -1,0 +1,400 @@
+
+/* =========================================
+   GROUP CONNECT — STYLES
+========================================= */
+
+:root {
+    --primary: #1154e6;
+    --primary-dark: #142f61;
+    --accent: #3a4da3;
+    --page-bg: #f0f5fc;
+    --card-bg: #ffffff;
+    --text: #183453;
+    --muted: #657a91;
+    --border: #d8e4f2;
+    --soft-blue: #e8f3ff;
+    --success-bg: #e7f8ed;
+    --error-bg: #ffeded;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--page-bg);
+    line-height: 1.6;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* HEADER */
+
+.site-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+    color: #e4e011;
+    padding: 38px 20px;
+    text-align: center;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #f8f8f7;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.header-subtitle {
+    margin: 15px 0 25px;
+    color: #15df1f;
+}
+
+.organization-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(187, 90, 90, 0.16);
+    border: 1px solid rgba(172, 67, 67, 0.3);
+    border-radius: 12px;
+}
+
+
+/* INTRODUCTION */
+
+.intro-section {
+    max-width: 1100px;
+    margin: 24px auto 10px;
+    padding: 0 20px;
+}
+
+.intro-section h2 {
+    margin-bottom: 6px;
+}
+
+.intro-section p {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+
+/* GROUP, LEADER AND PERSON MENUS */
+
+.control-section {
+    max-width: 1100px;
+    margin: 16px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(30, 112, 206, 0.04);
+}
+
+.control-section h2 {
+    margin: 0 0 4px;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+}
+
+.section-help {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+.picker-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 6px 2px 12px;
+    scrollbar-width: thin;
+}
+
+.picker-button,
+.picker-container button,
+.open-channel {
+    padding: 10px 15px;
+    color: var(--primary-dark);
+    background: #86ced3;
+    border: 1px solid #f7f9fc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.picker-container button {
+    flex: 0 0 auto;
+}
+
+.picker-button:hover,
+.picker-container button:hover,
+.open-channel:hover {
+    background: var(--soft-blue);
+    border-color: var(--accent);
+}
+
+.picker-container button.active {
+    background: var(--primary);
+    color: #f8f5f5;
+    border-color: var(--primary);
+}
+
+.open-channel {
+    padding: 5px 10px;
+    margin-left: 4px;
+}
+
+
+/* STATUS MESSAGE */
+
+.status-message {
+    max-width: 1100px;
+    margin: 18px auto;
+    padding: 12px 18px;
+    text-align: center;
+    color: #52b367;
+    background: #2876ad;
+    border-radius: 8px;
+}
+
+.status-message.hidden {
+    display: none;
+}
+
+.status-message.error {
+    color: #56bb3c;
+    background: var(--error-bg);
+    border: 1px solid #e97474;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1100px;
+    min-height: 160px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+.placeholder-text {
+    margin: 12px 0;
+    padding: 22px;
+    color: var(--muted);
+    text-align: center;
+    background: #d35c5c;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+
+/* GROUP LAYOUT */
+
+.view-layout {
+    display: grid;
+    grid-template-columns: minmax(250px, 0.9fr)
+                           minmax(0, 1.5fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.roster-section,
+.posts-section,
+.history-section,
+.history-card {
+    min-width: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(45, 216, 59, 0.04);
+}
+
+.view-title {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent);
+    overflow-wrap: anywhere;
+}
+
+.leader-box {
+    margin: 16px 0;
+    padding: 13px;
+    background: var(--soft-blue);
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+}
+
+.member-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.member-list li {
+    padding: 10px 4px;
+    border-bottom: 1px solid #4286df;
+    overflow-wrap: anywhere;
+}
+
+.member-list li:last-child {
+    border-bottom: none;
+}
+
+.member-role {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+/* POSTS */
+
+.post-card {
+    margin: 14px 0;
+    padding: 16px;
+    background: #d5e76b;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.post-author {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.post-date {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.post-body {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.attachment-badge {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 12px;
+    padding: 7px 10px;
+    background: var(--soft-blue);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.section-description {
+    color: var(--muted);
+    font-style: italic;
+}
+
+
+/* PERSON HISTORY */
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.history-posts-title {
+    margin-top: 24px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 40px;
+    padding: 28px 20px;
+    color: #eee6e6;
+    background: var(--primary-dark);
+    text-align: center;
+}
+
+.footer h2 {
+    margin: 0 0 5px;
+}
+
+.footer p {
+    margin: 3px 0;
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 760px) {
+    .view-layout,
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header {
+        padding: 30px 16px;
+    }
+
+    .control-section {
+        margin: 12px;
+        padding: 15px;
+    }
+
+    main {
+        margin: 16px auto;
+        padding: 0 12px;
+    }
+
+    .roster-section,
+    .posts-section,
+    .history-section,
+    .history-card {
+        padding: 15px;
+    }
+}
