@@ -1,0 +1,348 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  color: #40514e;
+  line-height: 1.8;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 5.5rem;
+  color: #66bfbf;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #66bfbf;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #11999e;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   TOP CONTAINER
+========================= */
+
+.top-container {
+  background-color: #e4f9f5;
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+  min-height: 550px;
+}
+
+.title-text {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.title-text h2 {
+  font-size: 1.5rem;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+/* Cloud images */
+
+.top-cloud {
+  position: absolute;
+  right: 15%;
+  top: 45px;
+  width: 150px;
+  height: auto;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 15%;
+  bottom: 180px;
+  width: 150px;
+  height: auto;
+}
+
+/* Mountain image */
+
+.mountain {
+  display: block;
+  width: 500px;
+  max-width: 90%;
+  height: 250px;
+  object-fit: contain;
+  margin: 20px auto 0;
+}
+
+/* =========================
+   MIDDLE CONTAINER
+========================= */
+
+.middle-container {
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* Profile section */
+
+.profile {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid #e4f9f5;
+}
+
+.profile h2 {
+  margin-bottom: 15px;
+}
+
+.intro {
+  width: 80%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Horizontal line */
+
+hr {
+  border: dotted #c5dada 6px;
+  border-bottom: none;
+  width: 5%;
+  min-width: 50px;
+  margin: 100px auto;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills > h2 {
+  margin-bottom: 40px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 35px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: center;
+}
+
+/* Skill images */
+
+.typing img,
+.chillies img {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Skill descriptions */
+
+.coding,
+.Eating {
+  padding: 15px;
+}
+
+.coding p,
+.Eating p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-me {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-me h2 {
+  margin-bottom: 20px;
+}
+
+.contact-me h3 {
+  margin-bottom: 15px;
+}
+
+.contact-message {
+  width: 90%;
+  margin: 20px auto 35px;
+}
+
+/* Contact button */
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(
+    to bottom,
+    #11cdd4,
+    #11999e
+  );
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    #30e3cb,
+    #2bc4ad
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.bottom-container {
+  background-color: #66bfbf;
+  padding: 45px 20px 25px;
+  text-align: center;
+}
+
+.footer-link {
+  color: #087e83;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.8rem;
+  margin-top: 25px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   For mobile phones
+========================= */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .top-container {
+    padding-top: 100px;
+    min-height: 450px;
+  }
+
+  .top-cloud {
+    width: 100px;
+    right: 5%;
+    top: 25px;
+  }
+
+  .bottom-cloud {
+    width: 100px;
+    left: 3%;
+    bottom: 140px;
+  }
+
+  .mountain {
+    width: 95%;
+    height: 180px;
+  }
+
+  .middle-container {
+    margin: 50px auto;
+  }
+
+  .parent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .typing img,
+  .chillies img {
+    max-width: 200px;
+    height: 160px;
+  }
+
+  .coding,
+  .Eating {
+    padding: 10px 5px 25px;
+  }
+
+  hr {
+    margin: 60px auto;
+  }
+
+  .footer-link {
+    margin: 8px 10px;
+  }
+
+  .profile img {
+    width: 150px;
+    height: 150px;
+  }
+}
